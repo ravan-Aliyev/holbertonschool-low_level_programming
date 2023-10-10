@@ -1,2 +1,3 @@
 #!/bin/bash
-betty $CFILE
+gcc -E $CFILE -o main.c
+
