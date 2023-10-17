@@ -23,8 +23,11 @@ void times_table(void)
 				printf("%d", times / 10);
 			}
 			printf("%d", times % 10);
-			printf(",");
-			printf(" ");
+			if (j < 9)
+			{
+				printf(",");
+				printf(" ");
+			}
 		}
 		printf("\n");
 	}
