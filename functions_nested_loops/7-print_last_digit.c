@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 /**
  *print_last_digit - Check c is letter or not.
@@ -8,7 +9,8 @@
  */
 int print_last_digit(int n)
 {
-	int y = n % 10;
+	int y = abs(n) % 10;
+	int lastdigit = (y * 10) + y;
 
-	return (y);
+	return (lastdigit);
 }
