@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- *_isalpha - Check c is letter or not.
+ *_abs - Check c is letter or not.
  *@n: is number for the check.
  *
  *Return: Absolute value of n.
