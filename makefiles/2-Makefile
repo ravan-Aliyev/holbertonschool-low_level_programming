@@ -10,3 +10,6 @@ $(NAME): $(OBJ)
 
 %.o: %.c
 	$(CC) -c -o $< $@
+
+clean:
+	rm -f $(NAME) $(OBJ)
