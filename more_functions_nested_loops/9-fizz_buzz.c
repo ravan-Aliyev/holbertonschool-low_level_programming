@@ -17,7 +17,11 @@ int main(void)
 		}
 		else if (i % 3 == 0 || i % 5 == 0)
 		{
-			i % 3 == 0 ? printf("Fizz ") : printf("Buzz ");
+			i % 3 == 0 ? printf("Fizz") : printf("Buzz");
+			if (i < 100)
+			{
+				printf(" ");
+			}
 		}
 		else
 		{
