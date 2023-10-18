@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * _isupper - check character is upper or not.
+ *mul - find multipile of two number.
  *@a: is number.
  *@b: is number
  *
