@@ -22,7 +22,10 @@ void times_table(void)
 			{
 				printf("%d", times / 10);
 			}
-			printf("%d", times % 10);
+			if (times != 0)
+			{
+				printf("%d", times % 10);
+			}
 			if (j < 9)
 			{
 				printf(",");
