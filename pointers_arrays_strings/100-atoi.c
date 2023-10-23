@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdlib>
+#include <stdlib.h>
 /**
  * _atoi - Turn string into the number.
  * @s: string
