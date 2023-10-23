@@ -11,6 +11,7 @@ void puts_half(char *str)
 
 	for (i = 0; i <= n; i++)
 	{
-		printf("%c\n", str[i + n + 1]);
+		printf("%c", str[i + n + 1]);
 	}
+	printf("\n");
 }
