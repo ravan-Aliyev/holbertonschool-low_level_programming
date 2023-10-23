@@ -9,9 +9,12 @@ void puts2(char *str)
 {
 	size_t i;
 
-	for (i = 0; i < strlen(str) - 1; i += 2)
+	if (strlen(str) > 0)
 	{
-		printf("%c", str[i]);
+		for (i = 0; i < strlen(str); i += 2)
+		{
+			printf("%c", str[i]);
+		}
 	}
 	putchar('\n');
 }
