@@ -18,13 +18,9 @@ char *string_toupper(char *str)
 		}
 		else
 		{
-			if (str[i] == ' ')
+			if ((str[i] >= 'A' && str[i] <= 'Z') || (str[i] >= 'a' && str[i] <= 'z'))
 			{
-				str[i] = ' ';
-			}
-			else if (str[i] == '\n')
-			{
-				str[i] = '\n';
+				str[i] = str[i];
 			}
 			else
 			{
