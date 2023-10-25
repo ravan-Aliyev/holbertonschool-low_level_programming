@@ -4,6 +4,7 @@
  * _strncpy - copy string.
  * @dest: string.
  * @src: string.
+ * @n: number of character.
  *
  * Return: Concatinate string.
  */
