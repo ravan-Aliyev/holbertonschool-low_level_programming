@@ -10,6 +10,7 @@ char *cap_string(char *str)
 	int i;
 	int j;
 	char sepe[] = " ,.;!?\"({)}\n\t";
+	int isFirst = 1;
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -23,9 +24,10 @@ char *cap_string(char *str)
 			{
 				for (j = 0; sepe[j] != '\0'; j++)
 				{
-					if (str[i - 1] == sepe[j] || i == 0)
+					if (str[i - 1] == sepe[j] || isFirst)
 					{
 						str[i] -= 32;
+						isFirst = 0;
 					}
 				}
 			}
@@ -35,7 +37,6 @@ char *cap_string(char *str)
 			}
 		}
 	}
-	str[0] -= 32;
 	str[i] = '\0';
 	return (str);
 }
