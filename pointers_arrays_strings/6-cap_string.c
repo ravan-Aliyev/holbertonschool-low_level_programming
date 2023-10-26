@@ -25,7 +25,7 @@ char *cap_string(char *str)
 				{
 					if (str[i - 1] == sepe[j] || i == 0)
 					{
-						str[i] = str[i] - 32;
+						str[i] -= 32;
 					}
 				}
 			}
@@ -35,6 +35,7 @@ char *cap_string(char *str)
 			}
 		}
 	}
+	str[0] -= 32;
 	str[i] = '\0';
 	return (str);
 }
