@@ -1,14 +1,11 @@
 #include <stdio.h>
 /**
- * _strpbrk - cut string.
- * @s: string.
- * @accept: charcter.
- *
- * Return: changing character.
+ * print_chessboard - print chess board.
+ * @a: array.
  */
 void print_chessboard(char (*a)[8])
 {
-	long unsigned int i, j;
+	unsigned long int i, j;
 
 
 	for (i = 0; i < sizeof(a); i++)
