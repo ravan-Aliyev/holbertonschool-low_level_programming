@@ -13,6 +13,6 @@ void puts_half(char *str)
 	{
 		printf("%c", str[i + n + 1]);
 	}
-	str[i] = '\0';
+	str[n] = '\0';
 	putchar('\n');
 }
