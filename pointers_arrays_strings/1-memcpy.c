@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * _memset - replace string.
- * @s: string.
- * @b: string what we changed to.
+ * _memcpy - replace string.
+ * @dest: string.
+ * @src: string what we changed to.
  * @n: how many characters we changed.
  *
  * Return: changing character.
@@ -18,5 +18,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 			dest[i] = src[i];
 		}
 	}
+	dest[i] = '\0';
 	return (dest);
 }
