@@ -18,5 +18,5 @@ char *_strchr(char *s, char c)
 			*result = &s[i];
 		}
 	}
-	return (result);
+	return (char *)result;
 }
