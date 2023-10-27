@@ -2,19 +2,19 @@
 /**
  * _strchr - cut string.
  * @s: string.
- * @b: charcter.
+ * @c: charcter.
  *
  * Return: changing character.
  */
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')
+	while (*s != '\0' + 1)
 	{
 		if (*s == c)
 		{
-			return(s);
+			return (s);
 		}
 		s++;
 	}
-	return NULL;
+	return (NULL);
 }
