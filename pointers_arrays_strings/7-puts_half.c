@@ -6,12 +6,12 @@
  */
 void puts_half(char *str)
 {
-	int i;
-	int n = (strlen(str) - 1) / 2;
+	size_t i;
+	int n = strlen(str) % 2 == 0 ? strlen(str) / 2 : (strlen(str) / 2) + 1;
 
-	for (i = 0; i <= n; i++)
+	for (i = n; i < strlen(str); i++)
 	{
-		printf("%c", str[i + n + 1]);
+		printf("%c", str[i]);
 	}
-	putchar('\n');
+	printf("\n");
 }
