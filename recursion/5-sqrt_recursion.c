@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
- *factorial - Find factorial of a number.
- *@n: number.
+ *find_sqrt - find sqrt of number.
+ *@num: number.
+ *@root: number.
  *
- *Return: -1 if n less than zero, 1 if n equal zero or one, otherwise factorial
+ * Return: Sqrt of number.
  */
-
 int find_sqrt(int num, int root)
 {
 	if ((root * root) == num)
@@ -15,6 +15,12 @@ int find_sqrt(int num, int root)
 
 	return (find_sqrt(num, root + 1));
 }
+/**
+ *_sqrt_recursion - show sqrt of number.
+ *@n: Number.
+ *
+ * Return: Result of find_sqrt.
+ */
 
 int _sqrt_recursion(int n)
 {
