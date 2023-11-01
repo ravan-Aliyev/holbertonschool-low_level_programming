@@ -12,9 +12,9 @@ int main(int argc, char *argv[])
 	int money = atoi(argv[1]);
 	int coins = 0;
 
-	if (argc == 2)
+	if (argc != 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 
