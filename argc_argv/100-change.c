@@ -13,7 +13,10 @@ int main(int argc, char *argv[])
 	int coins = 0;
 
 	if (argc == 2)
+	{
 		printf("Error");
+		return (1);
+	}
 
 	while (money > 0)
 	{
