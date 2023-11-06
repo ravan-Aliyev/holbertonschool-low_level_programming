@@ -1,6 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 int **alloc_grid(int, int);
 
@@ -42,8 +42,8 @@ int main(void)
 	int h;
 	int w;
 
-	h = 128;
-	w = 128;
+	h = 20;
+	w = 20;
 	grid = alloc_grid(h, w);
 	if (grid == NULL)
 	{
@@ -51,8 +51,6 @@ int main(void)
 	}
 	print_grid(grid, h, w);
 	printf("\n");
-	grid[23][14] = 98;
-	grid[19][43] = 402;
-	print_grid(grid, h, w);
+	free(grid);
 	return (0);
 }
