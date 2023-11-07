@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+char *string_nconcat(char *, char *, unsigned int);
+
 /**
  * main - check the code
  *
@@ -9,10 +11,15 @@
  */
 int main(void)
 {
-    char *concat;
+	char *s;
 
-    concat = string_nconcat("Best ", "School !!!", 9);
-    printf("%s\n", concat);
-    free(concat);
-    return (0);
+	s = string_nconcat("", "Hello", 12);
+	if (s == NULL)
+	{
+		printf("failed\n");
+		return (1);
+	}
+	printf("%s\n", s);
+	free(s);
+	return (0);
 }
