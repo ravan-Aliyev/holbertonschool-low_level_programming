@@ -3,6 +3,8 @@
 /**
  * malloc_checked - Allocate memory with malloc.
  * @b: size of array.
+ *
+ * Return: void arr.
  */
 void *malloc_checked(unsigned int b)
 {
@@ -10,7 +12,7 @@ void *malloc_checked(unsigned int b)
 
 	if (arr == NULL)
 	{
-		return (void *)98;
+		exit(EXIT_FAILURE);
 	}
 	return (arr);
 }
