@@ -2,20 +2,24 @@
 #include <string.h>
 /**
  * _calloc - Do what calloc do.
- * @nmemp: number of memory.
+ * @nmemb: number of memory.
  * @size: size of memory.
  *
  * Return: Pointer.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *arr = malloc(nmemb * size);
+	void *arr;
 	unsigned int i, j;
 
-	if (arr == NULL || nmemb == 0 || size == 0)
-	{
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
+
+	arr = malloc(nmemb * size);
+
+
+	if (arr == NULL)
+		return (NULL);
 
 	for (i = 0; i < nmemb; i++)
 	{
