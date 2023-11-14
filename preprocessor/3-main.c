@@ -10,10 +10,8 @@
 int main(void)
 {
     int i;
-    int j;
 
-    i = ABS(-98) * 10;
-    j = ABS(98) * 10;
-    printf("%d, %d\n", i, j);
+    i = ABS(1024 - 2048);
+    printf("%d\n", i);
     return (0);
 }
