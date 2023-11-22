@@ -24,7 +24,8 @@ int main(int argc, char *argv[])
 	op = malloc(strlen(argv[2]) + 1);
 	strcpy(op, argv[2]);
 
-	if (strcmp(op, "+") && strcmp(op, "-") && strcmp(op, "*") && strcmp(op, "/") && strcmp(op, "%"))
+	if (strcmp(op, "+") && strcmp(op, "-") && strcmp(op, "*")
+			&& strcmp(op, "/") && strcmp(op, "%"))
 	{
 		printf("Error\n");
 		exit(99);
