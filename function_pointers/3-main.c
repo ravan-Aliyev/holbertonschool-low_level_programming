@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int (*opt)(int, int);
 	char *op;
 
-	if (argc > 4)
+	if (argc > 4 || argc < 4)
 	{
 		printf("Error\n");
 		exit(98);
@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	if (strcmp(op, "+") && strcmp(op, "-") && strcmp(op, "*") && strcmp(op, "/") && strcmp(op, "%"))
 	{
 		printf("Error\n");
-		exit(100);
+		exit(99);
 	}
 
 	if ((!strcmp(argv[2], "/") || !strcmp(argv[2], "%")) && (atoi(argv[3]) == 0))
