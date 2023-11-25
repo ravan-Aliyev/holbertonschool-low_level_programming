@@ -5,19 +5,16 @@
  * print_all - Prints all things.
  * @format: Format of thing.
  */
-void print_all(const char * format, ...)
+void print_all(const char *format, ...)
 {
 	va_list args;
-	char check[] = {'c', 'i', 'f', 's'};
 	size_t i = 0;
-	int j = 0;
 	char *x;
 
 	va_start(args, format);
-
-	while (format[i] != '\0')
+	while (format[i] != '\0' && format)
 	{
-		switch (format[i])
+		switch (format[i++])
 		{
 			case 'c':
 				printf("%c", va_arg(args, int));
@@ -30,21 +27,17 @@ void print_all(const char * format, ...)
 				break;
 			case 's':
 				x = va_arg(args, char *);
-
 				if (x == NULL)
 					x = "(nil)";
 				printf("%s", x);
 				break;
+			default:
+				continue;
 		}
-
-		if (i != strlen(format) - 1 && format[i] == check[j])
-		{
+		if (format[i])
 			printf(", ");
-			j++;
-		}
-		i++;
-        }
-
+		
+	}
 	printf("\n");
 	va_end(args);
 }
