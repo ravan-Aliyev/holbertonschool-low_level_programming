@@ -12,7 +12,7 @@ void print_all(const char *format, ...)
 	char *x;
 
 	va_start(args, format);
-	while (format[i] != '\0' && format)
+	while (format[i] && format)
 	{
 		switch (format[i++])
 		{
@@ -36,7 +36,6 @@ void print_all(const char *format, ...)
 		}
 		if (format[i])
 			printf(", ");
-		
 	}
 	printf("\n");
 	va_end(args);
