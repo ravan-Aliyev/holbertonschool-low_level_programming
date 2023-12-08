@@ -1,14 +1,12 @@
 #include "lists.h"
 #include <stdlib.h>
 /**
- * insert_dnodeint_at_index - Insert new element at the index of list.
- * @h: head value of list.
- * @idx: index.
- * @n: value.
+ * len - findes length of linked list.
+ * @h: head of list.
  *
- * Return: Address of the node.
+ * Return: length of linked list.
  */
-unsigned int len (dlistint_t *h)
+unsigned int len(dlistint_t *h)
 {
 	unsigned int i = 0;
 
@@ -20,7 +18,14 @@ unsigned int len (dlistint_t *h)
 
 	return (i);
 }
-
+/**
+ * insert_dnodeint_at_index - Insert new element at the index of list.
+ * @h: head value of list.
+ * @idx: index.
+ * @n: value.
+ *
+ * Return: Address of the node.
+ */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
