@@ -8,28 +8,35 @@
  *
  * Return: Address of the node.
  */
+unsigned int len (dlistint_t *h)
+{
+	unsigned int i = 0;
+
+	while (h)
+	{
+		i++;
+		h = h->next;
+	}
+
+	return (i);
+}
+
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
 	unsigned int i;
 	dlistint_t *cur;
 	dlistint_t *new_l = malloc(sizeof(dlistint_t));
 
-	if (new_l == NULL)
+	if (new_l == NULL || idx > len(*h))
 		return (NULL);
 
 	new_l->n = n;
 	new_l->next = NULL;
 	new_l->prev = NULL;
 
-	if (*h == NULL || idx == 0)
+	if (idx == 0)
 	{
-		new_l->next = *h;
-		if (*h != NULL)
-			(*h)->prev = new_l;
-
-		*h = new_l;
-
-		return (new_l);
+		return (add_dnodeint(h, n));
 	}
 
 	cur = *h;
