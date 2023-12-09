@@ -20,7 +20,10 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	for (i = 0; i < index + 1; i++)
 		d <<= 1;
 
-	*n = d | *n;
+	if (*n & 1)
+		*n |= d;
+	else
+		*n &= d;
 
 	return (1);
 }
