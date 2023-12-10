@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * flip-bits - finds how many bits must change for the find m number.
+ * flip_bits - finds how many bits must change for the find m number.
  * @n: number.
  * @m: number.
  *
